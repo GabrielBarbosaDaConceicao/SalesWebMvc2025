@@ -1,0 +1,14 @@
+﻿using Microsoft.EntityFrameworkCore;
+using SalesWebMvc.Models;
+
+namespace SalesWebMvc.Data
+{
+    public class SallesWebMvcDbContext : DbContext
+    {
+        public SallesWebMvcDbContext(DbContextOptions<SallesWebMvcDbContext> options) : base(options)
+        {
+        }
+
+        public DbSet<Department> Department { get; set; }
+    }
+}
